@@ -20,6 +20,16 @@ Python 3.5 or newer is required.
 6. Try it out! You can edit most settings that are in `config.json` by browsing to http://web.archive.org while on the proxy, although you must edit `config.json` to make them permanent.
 7. Press Ctrl+C to stop the proxy
 
+
+## Modifications to the author's main branch
+
+The changes include:
+1. The main change is the abandonment of global variables and the use of a variable with a dictionary.
+2. Possibility to run the script with the `-c config.json` attribute. This allows you to have several configurations.
+3. `config_handler` now returns an object with the configuration that it loads from the given attribute or the default `config.json` file.
+4. Added the `run_waybackproxy.sh` file which runs three instances with sample configuration.
+5. The `setup_waybackproxy_service.sh` script creates a `waybackproxy.service` file that can be started by `systemd` at system startup.
+
 ## Docker Container
 
 A Dockerfile is included that allows you to run WaybackProxy from a docker container. 
